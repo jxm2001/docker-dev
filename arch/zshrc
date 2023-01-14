@@ -8,11 +8,10 @@ HISTSIZE=5000
 SAVEHIST=5000
 
 # plugins
-source ~/.zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
-source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
-source ~/.zsh/plugins/z/z.sh
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
 
 # completions setting
 setopt AUTO_LIST
