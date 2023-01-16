@@ -25,6 +25,7 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 # enable completion 
 autoload -U compinit
 compinit
+eval "$(zoxide init zsh)"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'

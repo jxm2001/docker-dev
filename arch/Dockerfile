@@ -14,6 +14,7 @@ RUN pacman -S zsh-theme-powerlevel10k --noconfirm
 RUN pacman -S zsh-syntax-highlighting --noconfirm
 RUN pacman -S zsh-autosuggestions --noconfirm
 RUN pacman -S zsh-completions --noconfirm
+RUN pacman -S zoxide --noconfirm
 RUN pacman -S fzf --noconfirm
 RUN sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 RUN useradd -m -s /bin/zsh jxm2001
