@@ -5,7 +5,6 @@ RUN pacman -S base-devel --noconfirm
 RUN pacman -S vi vim --noconfirm
 RUN pacman -S tmux --noconfirm
 RUN pacman -S git --noconfirm
-RUN pacman -S curl  --noconfirm
 RUN pacman -S wget --noconfirm
 RUN pacman -S cmake --noconfirm
 RUN pacman -S gdb --noconfirm
