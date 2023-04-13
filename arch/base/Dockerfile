@@ -1,4 +1,5 @@
 FROM archlinux
+# base build
 RUN echo 'Server = http://mirrors.pku.edu.cn/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 RUN pacman -Syu --noconfirm
 RUN pacman -S base-devel --noconfirm
@@ -15,6 +16,13 @@ RUN pacman -S zsh-autosuggestions --noconfirm
 RUN pacman -S zsh-completions --noconfirm
 RUN pacman -S zoxide --noconfirm
 RUN pacman -S fzf --noconfirm
+# add archlinuxcn and yay
+RUN echo '[archlinuxcn]' >> /etc/pacman.conf
+# RUN echo 'SigLevel = TrustAll' >> /etc/pacman.conf
+RUN echo 'Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch' >> /etc/pacman.conf
+RUN pacman -Sy archlinuxcn-keyring --noconfirm
+RUN pacman -S yay --noconfirm
+# add user
 RUN sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 RUN useradd -m -s /bin/zsh jxm2001
 RUN usermod -aG wheel jxm2001
