@@ -1,4 +1,4 @@
-FROM jxm2001/arch:base
+FROM jxm2001/arch:zsh
 USER root
 WORKDIR /root
 RUN pacman -S python-pip --noconfirm

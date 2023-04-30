@@ -11,4 +11,6 @@ RUN /bin/bash -c "source /opt/miniconda/etc/profile.d/conda.sh \
 RUN curl https://zh-v2.d2l.ai/d2l-zh-2.0.0.zip -o d2l-zh.zip
 RUN unzip d2l-zh.zip
 WORKDIR /home/jxm2001/pytorch
-CMD /bin/zsh
+CMD /bin/bash -c "source /opt/miniconda/etc/profile.d/conda.sh \
+    && conda activate d2l \
+	&& jupyter notebook"
