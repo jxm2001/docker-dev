@@ -1,0 +1,6 @@
+FROM jxm2001/ubuntu:zsh
+RUN apt install openssh-server net-tools -y
+RUN mkdir /run/sshd
+RUN chmod 0755 /run/sshd
+RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
+CMD ["/usr/sbin/sshd", "-D"]

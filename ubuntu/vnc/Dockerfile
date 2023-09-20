@@ -1,6 +1,4 @@
-FROM jxm2001/ubuntu:zsh
-USER root
+FROM jxm2001/ubuntu:ssh
 RUN apt install xfce4 -y
 RUN apt install tigervnc-standalone-server -y
-USER jxm2001
-CMD /bin/zsh
+CMD ["/usr/sbin/sshd", "-D"]

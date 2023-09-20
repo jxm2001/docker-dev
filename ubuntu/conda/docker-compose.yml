@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  conda-ubuntu:
+    container_name: conda-ubuntu
+    image: jxm2001/ubuntu:conda
+    volumes:
+      - /home/jxm2001/Code/python:/root/Code
+    ports:
+      - 127.0.0.1:10022:22
+    restart: unless-stopped

@@ -12,7 +12,3 @@ RUN apt install cmake -y
 RUN apt install gdb -y
 RUN apt install zsh -y
 RUN apt install fzf -y
-RUN apt install sudo -y
-RUN useradd -m -s /bin/zsh jxm2001
-RUN usermod -aG sudo jxm2001
-RUN echo jxm2001:jxm2001 | chpasswd
