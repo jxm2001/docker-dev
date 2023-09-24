@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web-debian:
+    container_name: web-debian
+    image: jxm2001/debian:vnc
+    volumes:
+      - /home/jxm2001/Code/python:/root/Code
+    ports:
+      - 127.0.0.1:10022:22
+      - 127.0.0.1:15901:5901
+    restart: unless-stopped
